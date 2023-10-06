@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-12 col-md-4">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img style="height:100px" src="~/img/stationary-2-1-.jpg" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@ViewBag.KategoriSayisi</h5>
+                        <p class="card-text">Kategori</p>
+                        <p class="card-text">
+                            <a href="/Category/Index" class="card-link">Kategori Yönetimi</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img style="height:100px" src="~/img/stationary-2-1-.jpg" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@ViewBag.UrunSayisi</h5>
+                        <p class="card-text">Ürün Çeşiti</p>
+                        <p class="card-text">     
+                            <a href="/Product/Index" class="card-link">Ürün Yönetimi</a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

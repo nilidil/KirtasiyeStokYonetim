@@ -1,0 +1,16 @@
+﻿@model NLayer.Core.Models.Product
+
+
+    <form method="post" action="/Product/DeleteConfirm">
+
+        @Html.HiddenFor(x=>x.Id)
+
+        <div class="mb-3">
+            @Model.Name adlı ürün silinecektir. Onaylıyor musunuz?
+        </div>
+
+        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</button>
+
+    <a class="btn btn-primary" href="/Product/Index"><i class="fa fa-long-arrow-alt-left"></i> Geri dön </a>
+</form>
+

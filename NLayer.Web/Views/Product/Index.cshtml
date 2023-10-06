@@ -1,0 +1,53 @@
+﻿@model List<NLayer.Core.DTOs.ProductWithCategoryAndFeatureDto>
+<div class="row">
+    <div class="col-sm-6 col-md-6">
+        <h3>Ürün Yönetimi</h3>
+    </div>
+    <div class="col-sm-6 col-md-6">
+        <a class="btn btn-primary float-end" href="/Product/Create">Ürün Ekle</a>
+    </div>
+</div>
+<hr />
+<table class="table table-striped table-hover">
+    <thead>
+      <tr>
+          <th>#</th>
+          <th>Ürün Ad</th>
+          <th>Kategori</th>
+          <th>Fiyat</th>
+          <th>Stok Miktarı</th>
+          <th>Renk</th>
+          <th>Yükseklik</th>
+          <th>Genişlik</th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Category.Name</td>
+            <td>@product.Price</td>
+            <td>@product.Stock</td>
+            <td>@product.ProductFeature?.Color</td>
+            <td>@product.ProductFeature?.Height</td>
+            <td>@product.ProductFeature?.Width</td>
+            <td width="80">
+                <div class="btn-group btn-group-sm">
+                  
+                        <a class="btn btn-xs btn-primary" href="/Product/Edit/@product.Id"><i class="fa fa-edit"></i></a>
+                     <a class="btn btn-xs btn-danger" href="/Product/Delete/@product.Id"><i class="fa fa-trash"></i></a>
+                </div>
+            </td>
+        </tr>    
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    <script>
+
+    </script>
+}

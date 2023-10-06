@@ -1,0 +1,22 @@
+﻿@model NLayer.Core.DTOs.CategoryWithProductsDto
+
+@if (Model.Products.Count > 0)
+{
+    <div class="mb-3">
+        @Model.Name adlı kategoriye bağlı ürünler olduğu için silinemez.
+    </div>
+    <a class="btn btn-primary" href="/Category/Index"><i class="fa fa-long-arrow-alt-left"></i> Geri dön </a>
+}
+else
+{
+    <form method="post" action="/Category/DeleteConfirm">
+
+        @Html.HiddenFor(x=>x.Id)
+
+        <div class="mb-3">
+            @Model.Name adlı kategori silinecektir. Onaylıyor musunuz?
+        </div>
+
+        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Sil</button>
+    </form>
+}

@@ -1,0 +1,11 @@
+﻿@model NLayer.Core.DTOs.CategoryDto
+
+<form method="post" action="/Category/Create">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Kategori Adı</label>
+        <input type="text" class="form-control" asp-for="Name">
+        @Html.ValidationMessageFor(x=>x.Name)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
